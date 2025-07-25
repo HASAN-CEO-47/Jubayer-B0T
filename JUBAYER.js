@@ -1,5 +1,5 @@
 module.exports = async ({ api, event }) => {
-  const logger = require('./ryuko/catalogs/ryukoc.js')
+  const logger = require('./JUBAYER/catalogs/Jubayerc.js')
   
   const configCustom = {
     autosetbio: {
