@@ -1,1 +1,1 @@
-require ('./ryuko/catalogs/ryukoa.js')
+require ('./JUBAYER/catalogs/jubayera.js')
