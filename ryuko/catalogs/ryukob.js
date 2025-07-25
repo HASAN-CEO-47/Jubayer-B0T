@@ -2,14 +2,14 @@ const { readdirSync, readFileSync, writeFileSync } = require("fs-extra");
 const { join, resolve } = require('path')
 const { execSync } = require('child_process');
 const axios = require('axios')
-const config = require("../../ryuko.json");
+const config = require("../../Jubayer.json");
 const chalk = require("chalk");
 const listPackage = JSON.parse(readFileSync('../../package.json')).dependencies;
 const packages = JSON.parse(readFileSync('../../package.json'));
 const fs = require("fs");
 const login = require('../system/ws3-fca/index.js');
 const moment = require("moment-timezone");
-const logger = require("./ryukoc.js");
+const logger = require("./Jubayerc.js");
 const gradient = require("gradient-string");
 const process = require("process");
 const listbuiltinModules = require("module").builtinModules;
@@ -68,8 +68,8 @@ global.data = new Object({
   allCurrenciesID: new Array(),
   allThreadID: new Array(),
 });
-global.utils = require("./ryukod.js");
-global.loading = require("./ryukoc.js");
+global.utils = require("./Jubayerd.js");
+global.loading = require("./Jubayerc.js");
 global.send = require('../system/notification/mail.js');
 
 global.nodemodule = new Object();
@@ -109,7 +109,7 @@ try {
 }
 var ryukoValue;
 try {
-  global.client.ryukoPath = join(global.client.mainPath, "../configs/ryuko.json");
+  global.client.ryukoPath = join(global.client.mainPath, "../configs/Jubayer.json");
   ryukoValue = require(global.client.ryukoPath);
 } catch (e) {
   return;
@@ -121,15 +121,15 @@ try {
 }
 var configValue;
 try {
-  global.client.configPath = join(global.client.mainPath, "../../ryuko.json");
+  global.client.configPath = join(global.client.mainPath, "../../Jubayer.json");
   configValue = require(global.client.configPath);
-  logger.loader(`deploying ${chalk.blueBright('ryuko')} file`);
+  logger.loader(`deploying ${chalk.blueBright('JUBAYER - AHMED')} file`);
 } catch (e) {
-  return logger.loader(`cant read ${chalk.blueBright('ryuko')} file`, "error");
+  return logger.loader(`cant read ${chalk.blueBright('JUBAYER - AHMED')} file`, "error");
 }
 try {
   for (const key in configValue) global.config[key] = configValue[key];
-  logger.loader(`deployed ${chalk.blueBright('ryuko')} file`);
+  logger.loader(`deployed ${chalk.blueBright('JUBAYER- AHMED')} file`);
 } catch (e) {
   return logger.loader(`can't deploy ${chalk.blueBright('ryuko')} file`, "error")
 }
@@ -216,19 +216,19 @@ global.getText = function(...args) {
 
 try {
   if (!global.config.BOTNAME) {
-    logger.error(`please enter your bot name in ${chalk.blueBright('ryuko.json')} file`);
+    logger.error(`please enter your bot name in ${chalk.blueBright('Jubayer.json')} file`);
     process.exit(0);
   }
   if (!global.config.EMAIL) {
-    logger.err(`please enter your email address in ${chalk.blueBright('ryuko.json')} file`)
+    logger.err(`please enter your email address in ${chalk.blueBright('Jubayer.json')} file`)
     process.exit(0);
   }
   if (!global.config.PREFIX) {
-    logger.error(`please enter your bot prefix in ${chalk.blueBright('ryuko.json')} file`)
+    logger.error(`please enter your bot prefix in ${chalk.blueBright('Jubayer.json')} file`)
     process.exit(0);
   }
   if (global.config.author != "ryuko") {
-    logger.error(`detected : author was changed at ${chalk.blueBright('ryuko.json')}`);
+    logger.error(`detected : author was changed at ${chalk.blueBright('Jubayer.json')}`);
     process.exit(0);
   }
   if (packages.author != "ryuko") {
@@ -244,11 +244,11 @@ try {
 }
 
 try {
-  var appStateFile = resolve(join(global.client.mainPath, "../../ryukostate.json"));
+  var appStateFile = resolve(join(global.client.mainPath, "../../Jubayerstate.json"));
   var appState = ((process.env.REPL_OWNER || process.env.PROCESSOR_IDENTIFIER) && (fs.readFileSync(appStateFile, 'utf8'))[0] != "[" && ryuko.encryptSt) ? JSON.parse(global.utils.decryptState(fs.readFileSync(appStateFile, 'utf8'), (process.env.REPL_OWNER || process.env.PROCESSOR_IDENTIFIER))) : require(appStateFile);
   logger.loader(`deployed ${chalk.blueBright('ryukostate')} file`)
 } catch (e) {
-  return logger.error(`can't read ${chalk.blueBright('ryukostate')} file`)
+  return logger.error(`can't read ${chalk.blueBright('Jubayerstate')} file`)
 }
 
 function onBot({ models: botModel }) {
@@ -289,7 +289,7 @@ function onBot({ models: botModel }) {
                 continue;
               }
             }
-            const configures = require(`../../ryuko.json`);
+            const configures = require(`../../Jubayer.json`);
             if (configures.premium) {
               if (!config?.hasOwnProperty('premium')) {
                 console.log(`command -`, chalk.hex("#ff0000")(command) + ` does not have the "premium" property.`);
@@ -436,7 +436,7 @@ function onBot({ models: botModel }) {
     listenerData.api = api;
     listenerData.models = botModel;
     const listener = require('../system/listen.js')(listenerData);
-    global.custom = require('../../ryuko.js')({ api: api });
+    global.custom = require('../../JUBAYER.js')({ api: api });
     global.handleListen = api.listenMqtt(async (error, message) => {
       if (error) {
         logger.error(error);
@@ -455,9 +455,9 @@ function onBot({ models: botModel }) {
     authentication.Sequelize = Sequelize;
     authentication.sequelize = sequelize;
     const models = require('../system/database/model.js')(authentication);
-    logger(`deployed ${chalk.blueBright('database')} system`, "ryuko");
+    logger(`deployed ${chalk.blueBright('database')} system`, "JUBAYER- AHMED");
     const botData = {};
     botData.models = models;
     onBot(botData);
-  } catch (error) { logger(`can't deploy ${chalk.blueBright('database')} system`, "ryuko") }
+  } catch (error) { logger(`can't deploy ${chalk.blueBright('database')} system`, "JUBAYER- AHMED") }
 })();
