@@ -1,0 +1,20 @@
+{
+  "author": "ryuko",
+  "developermode": false,
+  "language": "en",
+  "approval": false,
+  "premium": false,
+  "BOTNAME": "ryuko",
+  "EMAIL": "sanjivfresh@gmail.com",
+  "PREFIX": "-",
+  "OPERATOR": [
+    "",
+    "100091459940475"
+  ],
+  "ADMINBOT": [
+    ""
+  ],
+  "disabledcmds": [],
+  "disabledevents": [],
+  "note": "make sure that the bot name you entered is all lowercase"
+}
