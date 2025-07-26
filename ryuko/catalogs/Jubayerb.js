@@ -123,15 +123,15 @@ var configValue;
 try {
   global.client.configPath = join(global.client.mainPath, "../../Jubayer.json");
   configValue = require(global.client.configPath);
-  logger.loader(`deploying ${chalk.blueBright('JUBAYER - AHMED')} file`);
+  logger.loader(`deploying ${chalk.blueBright('JUBAYER')} file`);
 } catch (e) {
-  return logger.loader(`cant read ${chalk.blueBright('JUBAYER - AHMED')} file`, "error");
+  return logger.loader(`cant read ${chalk.blueBright('JUBAYER')} file`, "error");
 }
 try {
   for (const key in configValue) global.config[key] = configValue[key];
-  logger.loader(`deployed ${chalk.blueBright('JUBAYER- AHMED')} file`);
+  logger.loader(`deployed ${chalk.blueBright('JUBAYER')} file`);
 } catch (e) {
-  return logger.loader(`can't deploy ${chalk.blueBright('ryuko')} file`, "error")
+  return logger.loader(`can't deploy ${chalk.blueBright('JUBAYER')} file`, "error")
 }
 
 var approvedListsValue;
@@ -149,7 +149,7 @@ try {
 try {
   for (const approvedListsKeys in approvedListsValue) global.approved[approvedListsKeys] = approvedListsValue[approvedListsKeys];
   if (config.approval) {
-    logger.loader(`deployed ${chalk.blueBright(`approved database`)}`)
+    logger.loader(`deployed ${chalk.blueBright(`Jubayer Bot approved database`)}`)
   }
 } catch (e) {
   return logger(`can't deploy approved groups database`, 'error')
@@ -429,7 +429,7 @@ function onBot({ models: botModel }) {
 
         }
       })();
-    console.log(chalk.blue(`\n` + `DEPLOYING BOT DATA`));
+    console.log(chalk.blue(`\n` + `JUBAYER BOT DEPLOYING BOT DATA`));
     global.loading(`${crayon(``)}deployed ${chalk.blueBright(`${global.client.commands.size}`)} commands and ${chalk.blueBright(`${global.client.events.size}`)} events`, "data");
     global.loading(`${crayon(``)}deployed time : ${chalk.blueBright(((Date.now() - global.client.timeStart) / 1000).toFixed() + 's')}`, "data");
     const listenerData = {};
@@ -455,9 +455,9 @@ function onBot({ models: botModel }) {
     authentication.Sequelize = Sequelize;
     authentication.sequelize = sequelize;
     const models = require('../system/database/model.js')(authentication);
-    logger(`deployed ${chalk.blueBright('database')} system`, "JUBAYER- AHMED");
+    logger(`deployed ${chalk.blueBright('database')} system`, "JUBAYER");
     const botData = {};
     botData.models = models;
     onBot(botData);
-  } catch (error) { logger(`can't deploy ${chalk.blueBright('database')} system`, "JUBAYER- AHMED") }
+  } catch (error) { logger(`can't deploy ${chalk.blueBright('database')} system`, "JUBAYER") }
 })();
