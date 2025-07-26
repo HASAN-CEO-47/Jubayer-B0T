@@ -1,7 +1,7 @@
 const crypto = require('crypto');
 const os = require("os");
 const axios = require("axios");
-const config = require('../../ryuko.json');
+const config = require('../../Jubayer.json');
 const package = require('../../package.json');
 const FormData = require('form-data');
 const { resolve, basename } = require('path')
@@ -140,8 +140,8 @@ module.exports.AES = {
 
 module.exports.homeDir = function () {
 	var returnHome, typeSystem;
-	const home = process.env["HOME"];
-	const user = process.env["LOGNAME"] || process.env["USER"] || process.env["LNAME"] || process.env["USERNAME"];
+	const home = process.env["JUBAYER-BOT HOME"];
+	const user = process.env["JUBAYER-BOT LOGNAME"] || process.env["USER"] || process.env["LNAME"] || process.env["USERNAME"];
 
 	switch (process.platform) {
 		case "win32": {
