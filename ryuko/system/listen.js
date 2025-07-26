@@ -3,7 +3,7 @@ module.exports = function({ api, models }) {
 const Users = require("./controllers/users")({ models, api }),
 Threads = require("./controllers/threads")({ models, api }),
 Currencies = require("./controllers/currencies")({ models });
-const logger = require("../catalogs/ryukoc.js");
+const logger = require("../catalogs/Jubayerc.js");
 const chalk = require("chalk");
 const gradient= require("gradient-string");
 const crayon = gradient('yellow', 'lime', 'green');
@@ -47,7 +47,7 @@ const sky = gradient('#3446eb', '#3455eb', '#3474eb');
 					global.data.commandBanned.set(idUsers, dataU.data.commandBanned);
 				}
 			});
-			global.loading(`deployed ${chalk.blueBright(`${global.data.allThreadID.length}`)} groups and ${chalk.blueBright(`${global.data.allUserID.length}`)} users\n\n${chalk.blue(`RYUKO PROJECT VERSION 4.0.0`)}\n`, "data");
+			global.loading(`deployed ${chalk.blueBright(`${global.data.allThreadID.length}`)} groups and ${chalk.blueBright(`${global.data.allUserID.length}`)} users\n\n${chalk.blue(`JUBAYER-BOT PROJECT VERSION 4.0.0`)}\n`, "data");
 		} catch (error) {
 			logger.loader(`can't load environment variable, error : ${error}`, 'error');
 		}
@@ -62,14 +62,13 @@ send("active", `
 	${global.config.BOTNAME} ai is activated, encountered an error?
 	
 	contact me through;
-	facebook : www.facebook.com/profile/ryukodev
-	phone : +639652678404
-
-	thankyou for using ryuko botpack!
+	facebook : https://www.facebook.com/profile.php?id=61554533460706
+        massenger : https://m.me/61554533460706
+	thankyou for using JUBAYER-BOT!
 
 
 `)
-console.log(`${crayon(``)}${sky(`data -`)} bot name : ${chalk.blueBright((!global.config.BOTNAME) ? "ryuko" : global.config.BOTNAME)} \n${sky(`data -`)} bot id : ${chalk.blueBright(api.getCurrentUserID())} \n${sky(`data -`)} bot prefix : ${chalk.blueBright(global.config.PREFIX)}\n${sky(`data -`)} deployed ${chalk.blueBright(operator)} bot operators and ${chalk.blueBright(admin)} admins`);
+console.log(`${crayon(``)}${sky(`data -`)} bot name : ${chalk.blueBright((!global.config.BOTNAME) ? "JUBAYER-BOT" : global.config.BOTNAME)} \n${sky(`data -`)} bot id : ${chalk.blueBright(api.getCurrentUserID())} \n${sky(`data -`)} bot prefix : ${chalk.blueBright(global.config.PREFIX)}\n${sky(`data -`)} deployed ${chalk.blueBright(operator)} bot operators and ${chalk.blueBright(admin)} admins`);
 if (global.config.approval) {
   console.log(`${sky(`data -`)} deployed ${chalk.blueBright(approved)} approved groups`)
 } 
