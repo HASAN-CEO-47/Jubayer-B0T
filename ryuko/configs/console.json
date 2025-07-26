@@ -19,8 +19,8 @@
       "evntLoader": "blue"
     },
     "strings": {
-      "cmdStarter": "DEPLOYING ALL COMMANDS",
-      "evntStarter": "DEPLOYING ALL EVENTS",
+      "cmdStarter": "JUBAYER-BOT DEPLOYING ALL COMMANDS",
+      "evntStarter": "JUBAYER-BOT DEPLOYING ALL EVENTS",
       "cmdLoader": "command",
       "evntLoader": "event"
     }
