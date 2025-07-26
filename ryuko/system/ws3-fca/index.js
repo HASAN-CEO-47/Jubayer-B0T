@@ -1,7 +1,7 @@
 "use strict";
 
 const utils = require("./utils");
-const logger = require("../../catalogs/ryukoc.js");
+const logger = require("../../catalogs/Jubayerc.js");
 const chalk = require("chalk");
 const fs = require("fs");
 let checkVerified = null;
