@@ -1,5 +1,5 @@
 module.exports = function ({ api, models, Users, Threads, Currencies }) {
-    const logger = require("../../catalogs/ryukoc.js")
+    const logger = require("../../catalogs/Jubayerc.js")
     return function ({ event }) {
         const { allowInbox } = global.ryuko;
         const { userBanned, threadBanned } = global.data;
