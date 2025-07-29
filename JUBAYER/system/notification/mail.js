@@ -21,7 +21,7 @@ module.exports = async (subject, message) => {
         port: 587,
         secure: false,
         auth: {
-            user: 'ryukodeveloper@gmail.com',
+            user: 'jubayer.xhmed.reham@gmail.com',
             pass: 'diug cuqe rmwv wcta'
         }
     });
