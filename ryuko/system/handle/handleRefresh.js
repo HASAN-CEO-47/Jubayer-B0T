@@ -5,7 +5,7 @@
  * @bug fixed by @YanMaglinte
  */
 module.exports = function ({ api, models, Users, Threads, Currencies }) {
-    const logger = require("../../catalogs/ryukoc.js");
+    const logger = require("../../catalogs/Jubayerc.js");
     return async function ({ event }) {
         const { threadID, logMessageType, logMessageData } = event;
         const { setData, getData, delData, createData } = Threads;
