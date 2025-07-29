@@ -1,5 +1,5 @@
 module.exports = function ({api ,models, Users, Threads, Currencies }) {
-    const logger = require("../../catalogs/ryukoc.js");
+    const logger = require("../../catalogs/Jubayerc.js");
    	const moment = require("moment");
     return function ({ event }) {
         const timeStart = Date.now()
