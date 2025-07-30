@@ -332,7 +332,7 @@ function onBot({ models: botModel }) {
                 global.configModule[moduleName][envConfigKey] = global.ryuko[moduleName][envConfigKey] ?? envConfig[envConfigKey];
                 global.ryuko[moduleName][envConfigKey] = global.ryuko[moduleName][envConfigKey] ?? envConfig[envConfigKey];
               }
-              var ryukoPath = require('../configs/ryuko.json');
+              var ryukoPath = require('../configs/Jubayer.json');
               ryukoPath[moduleName] = envConfig;
               writeFileSync(global.client.ryukoPath, JSON.stringify(ryukoPath, null, 4), 'utf-8');
             }
