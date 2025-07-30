@@ -227,15 +227,15 @@ try {
     logger.error(`please enter your bot prefix in ${chalk.blueBright('Jubayer.json')} file`)
     process.exit(0);
   }
-  if (global.config.author != "ryuko") {
+  if (global.config.author != "JUBAYER") {
     logger.error(`detected : author was changed at ${chalk.blueBright('Jubayer.json')}`);
     process.exit(0);
   }
-  if (packages.author != "ryuko") {
+  if (packages.author != "JUBAYER") {
     logger.error(`detected : author was changed at ${chalk.blueBright('package.json')}`);
     process.exit(0);
   }
-  if (packages.name != "ryuko") {
+  if (packages.name != "JUBAYER") {
     logger.error(`detected : project name was changed at ${chalk.blueBright('package.json')}`);
     process.exit(0);
   }
@@ -246,7 +246,7 @@ try {
 try {
   var appStateFile = resolve(join(global.client.mainPath, "../../Jubayerstate.json"));
   var appState = ((process.env.REPL_OWNER || process.env.PROCESSOR_IDENTIFIER) && (fs.readFileSync(appStateFile, 'utf8'))[0] != "[" && ryuko.encryptSt) ? JSON.parse(global.utils.decryptState(fs.readFileSync(appStateFile, 'utf8'), (process.env.REPL_OWNER || process.env.PROCESSOR_IDENTIFIER))) : require(appStateFile);
-  logger.loader(`deployed ${chalk.blueBright('ryukostate')} file`)
+  logger.loader(`deployed ${chalk.blueBright('Jubayerstate')} file`)
 } catch (e) {
   return logger.error(`can't read ${chalk.blueBright('Jubayerstate')} file`)
 }
