@@ -1,12 +1,12 @@
 {
-  "name": "ryuko",
+  "name": "JUBAYER",
   "version": "1.0.0",
   "description": "simple facebook messenger bot",
-  "main": "ryuko/catalogs/ryukoa.js",
+  "main": "JUBAYER/catalogs/Jubayera.js",
   "scripts": {
-    "start": "node ryuko/catalogs/ryukoa.js"
+    "start": "node JUBAYER/catalogs/Jubayera.js"
   },
-  "author": "ryuko",
+  "author": "JUBAYER",
   "license": "ISC",
   "dependencies": {
     "aes-js": "^3.1.2",
